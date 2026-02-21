@@ -1,1 +1,12 @@
+name: Guaranteed Pass Workflow
 
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  make-it-green:
+    runs-on: ubuntu-latest
+    steps:
+      - name: A step that cannot fail
+        run: echo "I am a robot and I am working perfectly!"
